@@ -1,15 +1,22 @@
+import {Navigate, Route, Routes} from "react-router-dom";
+
 import './App.css';
-import {Header, Pokemons} from "./components";
+import {AuthRequireLayout, MainLayout} from "./layouts";
+import {PokemonsPage} from "./pages";
 
 function App() {
 
   return (
-    <div className="App">
-        <Header/>
+  <Routes>
+      <Route path={'/'} element={<MainLayout/>}>
+          <Route index element={<Navigate to={'pokemon'}/>}/>
 
-      <Pokemons/>
+          <Route element={<AuthRequireLayout/>}>
+              <Route path={'pokemon'} element={<PokemonsPage/>}/>
+          </Route>
 
-    </div>
+      </Route>
+  </Routes>
   );
 }
 

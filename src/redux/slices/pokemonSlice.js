@@ -4,13 +4,16 @@ import {pokemonService} from "../../services";
 const initialState = {
     pokemons: [],
     pokemon: [],
+    total_count: null,
+    next: null,
+    previous: null
 };
 
 const getAllPokemons = createAsyncThunk(
     'pokemonSlice/getAllPokemons',
-    async (_, {rejectedWithValue}) => {
+    async (params, {rejectedWithValue}) => {
         try {
-            const {data} = await pokemonService.getAll();
+            const {data} = await pokemonService.getAll(params);
             return data
         } catch (e) {
             return rejectedWithValue(e.response.data)
@@ -40,6 +43,9 @@ const pokemonSlice = createSlice({
         builder
             .addCase(getAllPokemons.fulfilled, (state, action) => {
                 state.pokemons = action.payload.results
+                state.total_count = action.payload.count
+                state.previous = action.payload.previous
+                state.next = action.payload.next
             })
             .addCase(getPokemonById.fulfilled, (state, action) => {
                 state.pokemon = action.payload

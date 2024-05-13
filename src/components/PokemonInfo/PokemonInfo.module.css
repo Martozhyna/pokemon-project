@@ -1,37 +1,53 @@
+.title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 15px;
+}
+
+.mainInfo {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 10px;
+}
+
 .card {
     position: relative;
-    width: 200px;
-    height: 250px;
-    border-radius: 14px;
+    width: 400px;
+    height: 500px;
+    border-radius: 28px;
     z-index: 1111;
     overflow: hidden;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    box-shadow: 20px 20px 60px #bebebe, -20px -20px 60px #ffffff;
+    box-shadow: 40px 40px 120px #bebebe, -40px -40px 120px #ffffff;
     margin: 20px;
 ;
 }
 
 .bg {
     position: absolute;
-    top: 5px;
-    left: 5px;
-    width: 190px;
-    height: 240px;
+    top: 10px;
+    left: 10px;
+    width: 380px;
+    height: 480px;
     z-index: 2;
     background: rgba(255, 255, 255, .95);
-    backdrop-filter: blur(24px);
-    border-radius: 10px;
+    backdrop-filter: blur(48px);
+    border-radius: 20px;
     overflow: hidden;
-    outline: 2px solid white;
+    outline: 4px solid white;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     flex-wrap: wrap;
     align-content: space-around;
-
+    align-items: center;
 }
 
 .blob {
@@ -39,12 +55,12 @@
     z-index: 1;
     top: 50%;
     left: 50%;
-    width: 150px;
-    height: 150px;
+    width: 300px;
+    height: 300px;
     border-radius: 50%;
-    background-color: #2354fe;
+    background-color: #fadb46;
     opacity: 1;
-    filter: blur(12px);
+    filter: blur(24px);
     animation: blob-bounce 5s infinite ease;
 }
 
@@ -77,5 +93,6 @@
 
 .text{
     font-family: Helvetica, Arial, sans-serif;
-    font-size: 30px;
+    border-bottom: 5px solid #fadb46;
+
 }

@@ -3,6 +3,7 @@ import {Navigate, Route, Routes} from "react-router-dom";
 import './App.css';
 import {AuthRequireLayout, MainLayout} from "./layouts";
 import {PokemonsPage} from "./pages";
+import {PokemonInfo} from "./components";
 
 function App() {
 
@@ -13,6 +14,7 @@ function App() {
 
           <Route element={<AuthRequireLayout/>}>
               <Route path={'pokemon'} element={<PokemonsPage/>}/>
+              <Route path={'pokemon/:id'} element={<PokemonInfo/>}/>
           </Route>
 
       </Route>

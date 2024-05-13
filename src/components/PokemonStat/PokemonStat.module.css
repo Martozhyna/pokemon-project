@@ -1,0 +1,11 @@
+.stat{
+    width: 600px;
+    height: 40px;
+    border: 2px solid #125be3;
+    border-radius: 15px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 40px 40px 120px #bebebe, -40px -40px 120px #ffffff;
+}

@@ -1,9 +1,10 @@
 import {useEffect} from 'react';
 import {useDispatch, useSelector} from 'react-redux';
+import {useSearchParams} from "react-router-dom";
+
 import {pokemonAction} from '../../redux';
 import {Pokemon} from '../Pokemon/Pokemon';
 import css from './Pokemons.module.css';
-import {useSearchParams} from "react-router-dom";
 import {Paginate} from "../Paginate/Paginate";
 
 const Pokemons = () => {

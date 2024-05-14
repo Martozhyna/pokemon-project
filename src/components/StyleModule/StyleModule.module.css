@@ -16,3 +16,11 @@
     color: white;
     font-weight: bold;
 }
+
+.position{
+    max-width: 300px;
+}
+
+.block{
+    display: flex;
+}

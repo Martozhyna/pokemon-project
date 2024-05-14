@@ -1,7 +1,8 @@
 import {useParams} from "react-router-dom";
 import {useEffect} from "react";
-import {pokemonAction} from "../../redux";
 import {useDispatch, useSelector} from "react-redux";
+
+import {pokemonAction} from "../../redux";
 import css from './PokemonInfo.module.css';
 import {PokemonStat} from "../PokemonStat/PokemonStat";
 import {PokemonAbility} from "../PokemonAbility/PokemonAbility";
@@ -12,13 +13,12 @@ const PokemonInfo = () => {
     const {id} = useParams();
     const dispatch = useDispatch();
     const {pokemon} = useSelector(state => state.pokemons);
-    console.log(pokemon)
-
 
     useEffect(() => {
         dispatch(pokemonAction.getPokemonById(id));
 
     }, [dispatch, id]);
+
     return (
         <div>
 
@@ -44,7 +44,7 @@ const PokemonInfo = () => {
                     }
                 </div>
             </div>
-            <div className={css.mainInfo}>
+            <div className={css.blocks}>
                 <div>
                     <h2 className={css.text}>
                         Abilities:

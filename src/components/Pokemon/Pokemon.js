@@ -1,9 +1,9 @@
 import {useState, useEffect} from 'react';
 import {useDispatch} from 'react-redux';
+import {useNavigate} from "react-router-dom";
 
 import {pokemonAction} from '../../redux';
 import css from './Pokemon.module.css';
-import {useNavigate} from "react-router-dom";
 
 const Pokemon = ({pokemon}) => {
 

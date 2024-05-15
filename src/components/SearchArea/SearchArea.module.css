@@ -1,0 +1,29 @@
+.inputs{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 10px;
+}
+.input {
+    border: 5px solid #125be3;
+    border-radius: 15px;
+    padding: 10px 25px;
+    background: transparent;
+    max-width: 190px;
+    text-align: center;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 18px;
+}
+
+.input:active {
+    box-shadow: 2px 2px 8px #125be3 inset;
+}
+
+.text{
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 5px;
+}

@@ -73,6 +73,13 @@
 .img{
     width: 108px;
     height: 108px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+
+.img:hover{
+    width: 118px;
+    height: 118px;
 }
 
 .text{

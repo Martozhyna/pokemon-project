@@ -1,8 +1,9 @@
-import {Pokemons} from "../../components";
+import {Pokemons, SearchArea} from "../../components";
 
 const PokemonsPage = () => {
     return (
         <div>
+            <SearchArea/>
             <Pokemons/>
         </div>
     )

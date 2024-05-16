@@ -8,3 +8,4 @@ export * from './PokemonAbility/PokemonAbility';
 export * from './PokemonType/PokemonType';
 export * from './StyleModule/StyleModule.module.css';
 export * from './SearchArea/SearchArea';
+export * from './PokemonsByType/PokemonsByType';

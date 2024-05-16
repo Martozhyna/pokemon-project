@@ -9,7 +9,7 @@ const Pokemon = ({pokemon}) => {
 
     const dispatch = useDispatch();
     const [pokemonData, setPokemonData] = useState(null);
-    const splittedApiKey = pokemon.url.split("/")
+    const splittedApiKey = pokemon?.url.split("/")
     const id = splittedApiKey[splittedApiKey.length - 2]
     const navigate = useNavigate();
 
